@@ -8,9 +8,10 @@ while True:
     if s == 'exit':
         break
 
-    if s not in tpl:
-        print('выберите операцию из списка!')
-        continue
+#  добавлен exception UnboundLocalError в operations       
+#     if s not in tpl:
+#         print('выберите операцию из списка!')
+#         continue
 
     a = float(input('a:'))
     b = float(input('b:'))
