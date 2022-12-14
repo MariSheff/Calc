@@ -11,7 +11,10 @@ def calculation(s,a,b):
                 result = (round(a/b, 2))
             except ZeroDivisionError:
                 result = ("Деление на 0")
+
         elif s == '^':
             result = (a**b)
-
-        return result
+        try:
+            return result
+        except UnboundLocalError:
+            return "выберите операцию из списка!"
