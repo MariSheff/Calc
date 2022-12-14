@@ -7,10 +7,10 @@ def calculation(s,a,b):
         elif s == '*':
             result = (a*b)
         elif s == '/':
-            if b==0:
-                result = ("Деление на 0")
-            else:
+            try:
                 result = (round(a/b, 2))
+            except ZeroDivisionError:
+                result = ("Деление на 0")
         elif s == '^':
             result = (a**b)
 
